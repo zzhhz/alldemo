@@ -14,6 +14,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.button).setOnClickListener(this);
+        findViewById(R.id.button2).setOnClickListener(this);
     }
 
     @Override
@@ -23,6 +24,9 @@ public class MainActivity extends BaseActivity {
             case R.id.button:
                 Intent intent = new Intent(this, TestActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.button2:
+
                 break;
         }
     }
