@@ -16,8 +16,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.TestActivity" />
-        <activity android:name=".activity.ToolbarsActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".activity.ToolbarsActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".activity.WrapperActivity" />
     </application>
 
 </manifest>

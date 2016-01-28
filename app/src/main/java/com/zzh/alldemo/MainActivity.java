@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.zzh.alldemo.activity.TestActivity;
 import com.zzh.alldemo.activity.ToolbarsActivity;
+import com.zzh.alldemo.activity.WrapperActivity;
 import com.zzh.alldemo.base.BaseActivity;
 
 public class MainActivity extends BaseActivity {
@@ -16,6 +17,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         findViewById(R.id.button).setOnClickListener(this);
         findViewById(R.id.button2).setOnClickListener(this);
+        findViewById(R.id.button6).setOnClickListener(this);
     }
 
     @Override
@@ -28,6 +30,10 @@ public class MainActivity extends BaseActivity {
             case R.id.button2:
                 Intent intent1 = new Intent(mContext, ToolbarsActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.button6:
+                Intent intent2 = new Intent(mContext, WrapperActivity.class);
+                startActivity(intent2);
                 break;
         }
     }
