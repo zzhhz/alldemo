@@ -27,10 +27,12 @@ import com.zzh.alldemo.R;
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener{
     protected Context mContext;
     private Toast mToast;
+    protected BaseHandler mHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = this;
+        mHandler = new BaseHandler();
     }
 
     /**
@@ -44,15 +46,15 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     protected abstract void initData();
 
     /**
+     * 设置控件的监听事件
+     */
+    protected abstract void setViewListener();
+
+    /**
      * 全局设置
      * @param msg
      */
     protected abstract void handlerMessage(Message msg);
-
-    /**
-     * 设置控件的监听事件
-     */
-    protected abstract void setViewListener();
 
     public void showMessage(String str){
         if (mToast == null) {
