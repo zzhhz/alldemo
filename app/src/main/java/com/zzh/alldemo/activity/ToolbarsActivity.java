@@ -1,6 +1,7 @@
 package com.zzh.alldemo.activity;
 
 import android.os.Bundle;
+import android.os.Message;
 import android.support.v7.widget.Toolbar;
 import android.view.Window;
 
@@ -17,5 +18,25 @@ public class ToolbarsActivity extends BaseActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Toolbar");
         setSupportActionBar(toolbar);
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void handlerMessage(Message msg) {
+
+    }
+
+    @Override
+    protected void setViewListener() {
+
     }
 }

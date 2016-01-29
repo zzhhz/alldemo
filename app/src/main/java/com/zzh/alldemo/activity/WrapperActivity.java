@@ -1,6 +1,7 @@
 package com.zzh.alldemo.activity;
 
 import android.os.Bundle;
+import android.os.Message;
 import android.view.View;
 
 import com.zzh.alldemo.R;
@@ -19,11 +20,31 @@ public class WrapperActivity extends BaseActivity {
     }
 
     @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void handlerMessage(Message msg) {
+
+    }
+
+    @Override
+    protected void setViewListener() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId())
         {
             case R.id.button5:
-                show("显示的提示信息阿斯顿发送到发送到发送到显示的提示信息阿斯顿发送到发送到发送到显示的提示信息阿斯顿发送到发送到发送到显示的提示信息阿斯顿发送到发送到发送到");
+                showMessage("显示的提示信息阿斯顿发送到发送到发送到显示的提示信息阿斯顿发送到发送到发送到显示的提示信息阿斯顿发送到发送到发送到显示的提示信息阿斯顿发送到发送到发送到");
                 break;
         }
     }

@@ -2,6 +2,7 @@ package com.zzh.alldemo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Message;
 import android.view.View;
 
 import com.zzh.alldemo.activity.TestActivity;
@@ -15,9 +16,32 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initView();
+        initData();
+        setViewListener();
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void handlerMessage(Message msg) {
+
+    }
+
+    @Override
+    protected void setViewListener() {
         findViewById(R.id.button).setOnClickListener(this);
         findViewById(R.id.button2).setOnClickListener(this);
         findViewById(R.id.button6).setOnClickListener(this);
+        findViewById(R.id.button7).setOnClickListener(this);
     }
 
     @Override
@@ -32,6 +56,7 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent1);
                 break;
             case R.id.button6:
+            case R.id.button7:
                 Intent intent2 = new Intent(mContext, WrapperActivity.class);
                 startActivity(intent2);
                 break;

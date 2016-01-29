@@ -6,5 +6,4 @@ package com.zzh.alldemo.utils;
  */
 public class HttpUtils {
 
-
 }
