@@ -5,5 +5,4 @@ package com.zzh.alldemo.utils;
  * 网络访问工具类
  */
 public class HttpUtils {
-
 }
