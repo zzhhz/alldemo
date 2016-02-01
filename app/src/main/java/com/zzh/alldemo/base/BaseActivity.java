@@ -1,19 +1,13 @@
 package com.zzh.alldemo.base;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import com.zzh.alldemo.R;
 
 /**
  * Created by zzh on 16-1-23.
