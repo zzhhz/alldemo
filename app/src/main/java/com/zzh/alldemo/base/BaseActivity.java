@@ -18,10 +18,11 @@ import android.widget.Toast;
  * initData()
  * setViewListener()
  */
-public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener{
+public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
     protected Context mContext;
     private Toast mToast;
     protected BaseHandler mHandler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,24 +47,27 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     /**
      * 全局设置
+     *
      * @param msg
      */
     protected abstract void handlerMessage(Message msg);
 
-    public void showMessage(String str){
+    public void showMessage(String str) {
         if (mToast == null) {
             mToast = Toast.makeText(mContext, str, Toast.LENGTH_SHORT);
-            mToast.setGravity(Gravity.CENTER, 0 , 0);
+            mToast.setGravity(Gravity.CENTER, 0, 0);
+        } else {
+            mToast.setText(str);
         }
         mToast.show();
     }
 
     @Override
-    public void onClick(View v){
+    public void onClick(View v) {
 
     }
 
-    private class BaseHandler extends Handler{
+    private class BaseHandler extends Handler {
         @Override
         public void handleMessage(Message msg) {
             handlerMessage(msg);

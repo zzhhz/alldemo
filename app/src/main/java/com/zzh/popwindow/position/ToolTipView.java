@@ -223,7 +223,7 @@ public class ToolTipView extends LinearLayout implements ViewTreeObserver.OnPreD
         int width = getWidth();
         int height = getHeight();
 
-        // TODO supports Gravity.NO_GRAVITY
+        // supports Gravity.NO_GRAVITY
         if (gravity == Gravity.TOP || gravity == Gravity.BOTTOM) {
             ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) getLayoutParams();
             if (gravity == Gravity.TOP) {
