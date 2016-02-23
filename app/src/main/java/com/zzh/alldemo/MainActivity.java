@@ -9,6 +9,7 @@ import com.zzh.alldemo.activity.TestActivity;
 import com.zzh.alldemo.activity.ToolbarsActivity;
 import com.zzh.alldemo.activity.WrapperActivity;
 import com.zzh.alldemo.base.BaseActivity;
+import com.zzh.eventbus.EventBusActivity;
 import com.zzh.popwindow.position.PopWindowActivity;
 
 public class MainActivity extends BaseActivity {
@@ -44,6 +45,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.button6).setOnClickListener(this);
         findViewById(R.id.button7).setOnClickListener(this);
         findViewById(R.id.button8).setOnClickListener(this);
+        findViewById(R.id.button9).setOnClickListener(this);
     }
 
     @Override
@@ -65,6 +67,10 @@ public class MainActivity extends BaseActivity {
             case R.id.button8:
                 Intent intent3 = new Intent(mContext, PopWindowActivity.class);
                 startActivity(intent3);
+                break;
+            case R.id.button9:
+                Intent intent4 = new Intent(mContext, EventBusActivity.class);
+                startActivity(intent4);
                 break;
         }
     }
