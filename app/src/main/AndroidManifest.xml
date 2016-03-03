@@ -20,8 +20,10 @@
             android:name=".activity.ToolbarsActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".activity.WrapperActivity" />
-        <activity android:name="com.zzh.popwindow.position.PopWindowActivity" />
-        <activity android:name="com.zzh.eventbus.EventBusActivity"></activity>
+        <activity android:name="com.zzh.popwindow.PopWindowActivity" />
+        <activity android:name="com.zzh.eventbus.EventBusActivity" />
+        <activity android:name="com.zzh.listview.ListViewActivity" />
+        <activity android:name="com.zzh.selectimg.SelectPictureActivity"/>
     </application>
 
 </manifest>

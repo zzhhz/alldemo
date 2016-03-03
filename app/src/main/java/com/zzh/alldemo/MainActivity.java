@@ -10,7 +10,7 @@ import com.zzh.alldemo.activity.ToolbarsActivity;
 import com.zzh.alldemo.activity.WrapperActivity;
 import com.zzh.alldemo.base.BaseActivity;
 import com.zzh.eventbus.EventBusActivity;
-import com.zzh.popwindow.position.PopWindowActivity;
+import com.zzh.popwindow.PopWindowActivity;
 
 public class MainActivity extends BaseActivity {
 

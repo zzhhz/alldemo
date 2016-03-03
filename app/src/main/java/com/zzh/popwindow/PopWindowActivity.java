@@ -1,4 +1,4 @@
-package com.zzh.popwindow.position;
+package com.zzh.popwindow;
 
 import android.content.res.Resources;
 import android.graphics.Color;
@@ -13,6 +13,8 @@ import android.widget.FrameLayout;
 
 import com.zzh.alldemo.R;
 import com.zzh.alldemo.base.BaseActivity;
+import com.zzh.popwindow.position.ToolTip;
+import com.zzh.popwindow.position.ToolTipView;
 
 public class PopWindowActivity extends BaseActivity {
 

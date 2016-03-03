@@ -62,11 +62,6 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         mToast.show();
     }
 
-    @Override
-    public void onClick(View v) {
-
-    }
-
     private class BaseHandler extends Handler {
         @Override
         public void handleMessage(Message msg) {
