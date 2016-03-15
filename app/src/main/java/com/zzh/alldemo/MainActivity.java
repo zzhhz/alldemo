@@ -10,6 +10,8 @@ import com.zzh.alldemo.activity.ToolbarsActivity;
 import com.zzh.alldemo.activity.WrapperActivity;
 import com.zzh.alldemo.base.BaseActivity;
 import com.zzh.eventbus.EventBusActivity;
+import com.zzh.listview.ListViewActivity;
+import com.zzh.permission.PermissionActivity;
 import com.zzh.popwindow.PopWindowActivity;
 
 public class MainActivity extends BaseActivity {
@@ -18,9 +20,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initView();
-        initData();
-        setViewListener();
+        init();
     }
 
     @Override
@@ -46,6 +46,8 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.button7).setOnClickListener(this);
         findViewById(R.id.button8).setOnClickListener(this);
         findViewById(R.id.button9).setOnClickListener(this);
+        findViewById(R.id.button11).setOnClickListener(this);
+        findViewById(R.id.button12).setOnClickListener(this);
     }
 
     @Override
@@ -71,6 +73,14 @@ public class MainActivity extends BaseActivity {
             case R.id.button9:
                 Intent intent4 = new Intent(mContext, EventBusActivity.class);
                 startActivity(intent4);
+                break;
+            case R.id.button11:
+                Intent intent5 = new Intent(mContext, PermissionActivity.class);
+                startActivity(intent5);
+                break;
+            case R.id.button12:
+                Intent intent6 = new Intent(mContext, ListViewActivity.class);
+                startActivity(intent6);
                 break;
         }
     }

@@ -23,7 +23,8 @@
         <activity android:name="com.zzh.popwindow.PopWindowActivity" />
         <activity android:name="com.zzh.eventbus.EventBusActivity" />
         <activity android:name="com.zzh.listview.ListViewActivity" />
-        <activity android:name="com.zzh.selectimg.SelectPictureActivity"/>
+        <activity android:name="com.zzh.selectimg.SelectPictureActivity" />
+        <activity android:name="com.zzh.permission.PermissionActivity"/>
     </application>
 
 </manifest>

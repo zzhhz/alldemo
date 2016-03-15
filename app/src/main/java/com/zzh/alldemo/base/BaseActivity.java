@@ -1,6 +1,9 @@
 package com.zzh.alldemo.base;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -17,18 +20,41 @@ import android.widget.Toast;
  * initView()
  * initData()
  * setViewListener()
+ * BaseBroadCastReceiver
  */
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
     protected Context mContext;
     private Toast mToast;
     protected BaseHandler mHandler;
+    protected BaseReceiver mReceiver;
+    protected IntentFilter mFilter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = this;
         mHandler = new BaseHandler();
+        if (mFilter == null)
+            mFilter = new IntentFilter();
+        if (mReceiver == null)
+            mReceiver = new BaseReceiver();
+        initRecceiver();
     }
+
+    /**
+     * 添加接收规则
+     */
+    private void initRecceiver() {
+        ///mFilter
+        ///mFilter.addAction();
+    }
+
+    protected void init(){
+        initView();
+        initData();
+        setViewListener();
+    }
+
 
     /**
      * 初始化控件
@@ -48,9 +74,18 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     /**
      * 全局设置
      *
-     * @param msg
+     * @param msg 接收到的Message
      */
     protected abstract void handlerMessage(Message msg);
+
+    /**
+     * 接收广播
+     * @param context 上下文
+     * @param intent 接收到的数据
+     */
+    protected void onBroadCastReceiver(Context context, Intent intent){
+
+    }
 
     public void showMessage(String str) {
         if (mToast == null) {
@@ -62,10 +97,24 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         mToast.show();
     }
 
+    /**
+     * Handler
+     */
     private class BaseHandler extends Handler {
         @Override
         public void handleMessage(Message msg) {
             handlerMessage(msg);
+        }
+    }
+
+    /**
+     * 广播
+     */
+    private class BaseReceiver extends BroadcastReceiver{
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            onBroadCastReceiver(context, intent);
         }
     }
 

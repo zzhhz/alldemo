@@ -8,6 +8,17 @@ public class Person {
     private String userName;
     private String imageHeadUrl;
 
+
+
+    public Person() {
+    }
+
+    public Person(String uid, String userName, String imageHeadUrl) {
+        this.uid = uid;
+        this.userName = userName;
+        this.imageHeadUrl = imageHeadUrl;
+    }
+
     public String getUid() {
         return uid;
     }

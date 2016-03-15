@@ -5,13 +5,6 @@
     android:layout_height="match_parent"
     tools:context="com.zzh.alldemo.activity.TestActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="做测试用的view"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -35,6 +28,5 @@
         android:id="@+id/button4"
         android:background="?android:attr/selectableItemBackgroundBorderless"
         android:layout_below="@+id/button2"
-        android:layout_alignEnd="@+id/button2"
         android:layout_marginTop="10dp" />
 </RelativeLayout>
