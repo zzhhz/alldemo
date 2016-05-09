@@ -13,6 +13,8 @@ import com.zzh.eventbus.EventBusActivity;
 import com.zzh.listview.ListViewActivity;
 import com.zzh.permission.PermissionActivity;
 import com.zzh.popwindow.PopWindowActivity;
+import com.zzh.retrofit.RetrofitActivity;
+import com.zzh.vaeview.VaeViewActivity;
 
 public class MainActivity extends BaseActivity {
 
@@ -48,6 +50,8 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.button9).setOnClickListener(this);
         findViewById(R.id.button11).setOnClickListener(this);
         findViewById(R.id.button12).setOnClickListener(this);
+        findViewById(R.id.button13).setOnClickListener(this);
+        findViewById(R.id.button14).setOnClickListener(this);
     }
 
     @Override
@@ -81,6 +85,16 @@ public class MainActivity extends BaseActivity {
             case R.id.button12:
                 Intent intent6 = new Intent(mContext, ListViewActivity.class);
                 startActivity(intent6);
+                break;
+            case R.id.button13:
+                Intent intent7 = new Intent(mContext, VaeViewActivity.class);
+                startActivity(intent7);
+                break;
+            case R.id.button14:
+                Intent intent8 = new Intent(mContext, RetrofitActivity.class);
+                startActivity(intent8);
+                break;
+            default:
                 break;
         }
     }

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zzh.alldemo">
+          package="com.zzh.alldemo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,21 +12,24 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.TestActivity" />
+        <activity android:name=".activity.TestActivity"/>
         <activity
             android:name=".activity.ToolbarsActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".activity.WrapperActivity" />
-        <activity android:name="com.zzh.popwindow.PopWindowActivity" />
-        <activity android:name="com.zzh.eventbus.EventBusActivity" />
-        <activity android:name="com.zzh.listview.ListViewActivity" />
-        <activity android:name="com.zzh.selectimg.SelectPictureActivity" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".activity.WrapperActivity"/>
+        <activity android:name="com.zzh.popwindow.PopWindowActivity"/>
+        <activity android:name="com.zzh.eventbus.EventBusActivity"/>
+        <activity android:name="com.zzh.listview.ListViewActivity"/>
+        <activity android:name="com.zzh.selectimg.SelectPictureActivity"/>
         <activity android:name="com.zzh.permission.PermissionActivity"/>
+        <activity android:name="com.zzh.vaeview.VaeViewActivity"/>
+        <activity android:name="com.zzh.retrofit.RetrofitActivity">
+        </activity>
     </application>
 
 </manifest>

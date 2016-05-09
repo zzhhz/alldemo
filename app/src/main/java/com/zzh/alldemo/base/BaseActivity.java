@@ -23,6 +23,7 @@ import android.widget.Toast;
  * BaseBroadCastReceiver
  */
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
+    protected static String TAG;
     protected Context mContext;
     private Toast mToast;
     protected BaseHandler mHandler;
@@ -32,6 +33,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TAG=this.getClass().getName();
         mContext = this;
         mHandler = new BaseHandler();
         if (mFilter == null)

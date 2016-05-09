@@ -70,4 +70,22 @@
         android:layout_below="@+id/button9"
         android:layout_toRightOf="@+id/button11"
         android:layout_toEndOf="@+id/button11" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义view"
+        android:id="@+id/button13"
+        android:layout_below="@+id/button12"
+        android:layout_toRightOf="@+id/button11"
+        android:layout_toEndOf="@+id/button11" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retrofit1,okhttp2"
+        android:id="@+id/button14"
+        android:layout_below="@+id/button13"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 </RelativeLayout>
